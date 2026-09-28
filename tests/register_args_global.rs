@@ -93,7 +93,9 @@ fn test_builtin_register_binds_args_global() {
         false,
     )
     .unwrap();
-    let result = jf.evaluate("_ViaArgs(21)", &data, None, None, false).unwrap();
+    let result = jf
+        .evaluate("_ViaArgs(21)", &data, None, None, false)
+        .unwrap();
     assert_eq!(result, json!(42));
 }
 
